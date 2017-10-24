@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
 <head>
     <title>About</title>
 </head>
@@ -81,12 +84,27 @@
             <td>45.3</td>
           </tr>
         </table>
-        <div class="chunk">
+
+        <h2>An example code chunk</h1>
+        <div class="codechunk">
+            <pre name="pre">
+    do <- list()
+    for (i in 1:100) {
+        do[i] <- i * 2
+    }
+    head(do, 3)
+            </pre>
+        </div>
+        <div class="outchunk">
             <pre>
-do <- list()
-for (i in 1:100) {
-    do[i] <- i * 2
-}; do
+    ## [[1]]
+    ## [1] 2
+
+    ## [[2]]
+    ## [1] 4
+
+    ## [[3]]
+    ## [1] 6
             </pre>
         </div>
         <br><br><br><br><br>
