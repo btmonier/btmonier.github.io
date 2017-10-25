@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<!-- CSS and Scripts -->
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+<head>
+    <title>Style Sheet</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a class="left" href="./index.html">Brandon Monier</a>
+        <a href="./about.html">About</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./software.html">Software</a>
+        <a href="./lab-info.html">Lab Info</a>
+        <a href="./external.html">External Links</a>
+    </div>
+
+    <!-- Content -->
+    <div class="wrap">
+        <h1>How did you get to this?</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <p>This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lectus ullamcorper, convallis magna a, accumsan massa. Nam molestie enim mi, vitae posuere urna pellentesque eget. Curabitur elementum eget augue et gravida. Integer sed venenatis magna. Etiam nec malesuada ipsum. Morbi egestas purus tempor nisl facilisis tristique. Nullam lectus dui, fringilla hendrerit pellentesque vehicula, interdum id nulla.</p>
+        <p>Nullam molestie nibh quis erat ultrices, et convallis enim luctus. Pellentesque hendrerit nunc quis viverra ultrices. Proin non ante ac dolor mattis mollis. Donec pretium ipsum in sem dignissim, sit amet auctor lorem condimentum. Cras commodo molestie ante ut dapibus. Suspendisse fringilla diam et dui imperdiet ultrices. Donec ornare volutpat odio gravida accumsan. Pellentesque ornare lorem a ante tristique, ut lobortis nisl accumsan. Phasellus lacus elit, hendrerit sed interdum quis, suscipit nec ex. Sed imperdiet lacus id lectus dictum egestas.</p> 
+        <p>This is some <a class="body" href="">linked text</a>.</p>
+        <p>This is some <i>italic text</i>.</p>
+        <p>This is some <b>bold text</b>.</p>
+        <p>This is some <sup>superscript text</sup>.</p>
+        <p>This is some <sub>subscript text</sub>.</p>
+        <p>This is some marked text <mark>marked text</mark>.</p>
+        <p>This is some <small>small text</small>.</p>
+        <p>This is some <del>deleted text</del>.</p>
+        <p>This is some <code>coded text</code>.</p>
+        <h2>An unordered list</h2>
+        <ul>
+            <li>Sample A</li>
+            <li>Sample B</li>
+            <li>Sample C</li>
+        </ul>
+        <h2>An ordered list</h2>
+        <ol>
+            <li>Sample A</li>
+            <li>Sample B</li>
+            <li>Sample C</li>
+        </ol>
+        <h2>An example table</h2>   
+        <table>
+          <tr>
+            <th>Sample</th>
+            <th>Treatment</th>
+            <th>Nutrient</th>
+            <th>Weight (g)</th>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>Good</td>
+            <td>F1</td>
+            <td>80.2</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Good</td>
+            <td>F2</td>
+            <td>103.3</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>Bad</td>
+            <td>F1</td>
+            <td>30.2</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>Bad</td>
+            <td>F2</td>
+            <td>45.3</td>
+          </tr>
+        </table>
+
+        <h2>An example code chunk</h1>
+        <div class="codechunk">
+            <pre>
+# Some horribly ineffecient R code...
+do <- list()
+for (i in 1:100) {
+    do[i] <- i * 2
+}
+head(do, 3)</pre>
+        </div>
+        <div class="outchunk">
+            <pre>
+## [[1]]
+## [1] 2
+
+## [[2]]
+## [1] 4
+
+## [[3]]
+## [1] 6</pre>
+        </div>
+
+        <h2>An example LaTeX math output</h2>
+        <p>Here is an inline equation: \(log_{2}(x + 2)\)</p>
+        <p>Here is an displayed equation: $$\int_0^\infty e^{-x^2} dx=\frac{\sqrt{\pi}}{2}$$</p>
+        <p>Here is a multiple line equation:
+        $$
+        \begin{eqnarray}
+        y &=& x^4 + 4      \nonumber \\
+          &=& (x^2+2)^2 -4x^2 \nonumber \\
+          &\le&(x^2+2)^2
+        \end{eqnarray}
+        $$</p>
+
+        <h2>An example note chunk</h2>
+        <div class="note">
+            <div class="notehead"></div>
+            <div class="notebody">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lectus ullamcorper, convallis magna a, accumsan massa. Nam molestie enim mi, vitae posuere urna pellentesque eget. Curabitur elementum eget augue et gravida. Integer sed venenatis magna. Etiam nec malesuada ipsum. Morbi egestas purus tempor nisl facilisis tristique. Nullam lectus dui, fringilla hendrerit pellentesque vehicula, interdum id nulla. Some <code>coded text</code>.
+            </div>
+        </div>
+
+        <h2>An example warning chunk</h2>
+        <div class="note">
+            <div class="warninghead"></div>
+            <div class="warningbody">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed lectus ullamcorper, convallis magna a, accumsan massa. Nam molestie enim mi, vitae posuere urna pellentesque eget. Curabitur elementum eget augue et gravida. Integer sed venenatis magna. Etiam nec malesuada ipsum. Morbi egestas purus tempor nisl facilisis tristique. Nullam lectus dui, fringilla hendrerit pellentesque vehicula, interdum id nulla.
+            </div>
+        </div>        
+        <br><br><br><br><br>
+    </div>
+</body>
+
+</html>
