@@ -1,8 +1,9 @@
-/*Title: Brandon's Custom CSS*/
-/*Last Updated: 10.21.17*/
+/*Brandon's Custom CSS*/
+/*Last Updated: 11.01.17*/
 
 /*Import fonts*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:400,700|Robot+Mono');
+
 
 
 /*Text headings and body*/
@@ -22,15 +23,6 @@ h2, h3 {
     font-weight: 400;
     margin-bottom: 0px;
 }
-p, li {
-    color: #242424;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 90%;
-}
-mark {
-    background: #e3e4fa;
-    font-family: 'Open Sans', sans-serif;
-}
 li {
     margin-bottom: 3px;
 }
@@ -39,21 +31,32 @@ li::before {
     display: inline-block;
     width: 5px;
 }
+mark {
+    background: #e3e4fa;
+    font-family: 'Open Sans', sans-serif;
+}
+p, li {
+    color: #242424;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 90%;
+}
 pre, code {
     font-family: 'Roboto Mono', monospace;
 }
 
 
+
 /*Links*/
-a.body:link, a.body:visited {
-    color: #2373ff;
-    text-decoration: none;
-}
 a.body:hover {
     background: #e3e4fa; 
     color: #2373ff;
     text-decoration: none;
 }
+a.body:link, a.body:visited {
+    color: #2373ff;
+    text-decoration: none;
+}
+
 
 
 /*Tables*/
@@ -81,6 +84,7 @@ th {
 tr:nth-child(odd){
     background-color: #f3f3f3;
 }
+
 
 
 /*Text wrappers*/
@@ -199,8 +203,6 @@ body {
 
 
 
-
-
 /*Icon properties*/
 .icon {
     padding-top: 50px;
@@ -213,6 +215,9 @@ body {
     color: #242424;
 }
 
+
+
+/*Main page image*/
 .circos {
     padding-top: 50px;
     text-align: center;
