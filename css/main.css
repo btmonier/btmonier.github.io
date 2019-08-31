@@ -204,7 +204,7 @@ body {
 
 /*Icon properties*/
 .icon {
-    padding-top: 50px;
+    padding-top: 75px;
     text-align: center;
 }
 .fa {
@@ -217,7 +217,7 @@ body {
 
 
 /*Main page image*/
-.circos {
+.homeimg {
     padding-top: 50px;
     text-align: center;
 }
