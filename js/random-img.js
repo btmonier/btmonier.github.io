@@ -2,7 +2,7 @@
 
 window.onload = choosePic;
 
-var myPix = new Array("img/avatar.svg", "img/circos.svg")
+var myPix = new Array("img/avatar.svg", "img/circos.svg", "img/chaos_fractals.png")
 
 function choosePic() {
 	var randomNum = Math.floor((Math.random() * myPix.length));
