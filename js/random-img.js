@@ -6,7 +6,7 @@ var myPix = new Array(
 	"img/avatar.svg", 
 	"img/circos.svg", 
 	"img/chaos_fractals.png",
-	"img/mandelbrot_set_7000_com.png"
+	"img/mandelbrot_set_7000_comp.png"
 )
 
 function choosePic() {
