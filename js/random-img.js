@@ -3,10 +3,11 @@
 window.onload = choosePic;
 
 var myPix = new Array(
-	"img/avatar.svg", 
-	"img/circos.svg", 
-	"img/chaos_fractals.png",
-	"img/mandelbrot_set_7000_comp.png"
+	"img/front/avatar.svg",
+	"img/front/cellular_automata_101.png",
+	"img/front/chaos_game_fractal_01.png",
+	"img/front/clifford_attractor.png",
+	"img/front/mandelbrot_set_7000_comp.png"
 )
 
 function choosePic() {
