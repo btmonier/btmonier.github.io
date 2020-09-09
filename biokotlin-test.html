@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="./css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./css/code-style.css">
+
+<!-- Scripts -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="./js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://unpkg.com/kotlin-playground@1"></script>
+
+
+
+<!-- The head -->
+<head>
+    <title>BioKotlin Playground</title>
+    <link rel="icon" href="./img/logo-32x32.png">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      KotlinPlayground('.code-blocks-selector');
+    });
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a class="left" href="./index.html">Brandon Monier</a>
+        <a href="./about.html">About</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./software.html">Software</a>
+        <a href="./teaching.html">Teaching</a>
+        <a href="./external.html">External Links</a>
+    </div>
+
+    <!-- Content -->
+    <div class="wrap">
+        <h1>BioKotlin Playground demo</h1>
+        <h2>Automatic initialization</h2>
+        <p>For instance following block of Kotlin code:</p>
+        <div class="code-blocks-selector">
+        <pre><code>
+fun main(args: Array &lt;String&gt;) {
+    println("Hello BioKotlin")
+}
+        </code></pre>
+        </div>
+    </div>
+
+</body>
+
+</html>
