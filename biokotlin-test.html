@@ -10,7 +10,7 @@
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="./js/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="https://unpkg.com/kotlin-playground@1" data-selector=".biokotlin-code" data-server="https://biokotlin-compiler.herokuapp.com"></script>
+<script src="https://unpkg.com/kotlin-playground@1" data-selector=".biokotlin-code" data-server="https://vast-shore-83729.herokuapp.com/"></script>
 
 
 
@@ -38,8 +38,15 @@
         <p>For instance following block of Kotlin code:</p>
         <div class="biokotlin-code">
         <pre><code>
-fun main(args: Array &lt;String>) {
-    println("Hello BioKotlin")
+import biokotlin.seq.*
+
+fun main(args: Array<String>) {
+    val seq = NucSeq("ACGGCGATACGGCGAT")
+
+    // The central dogma
+    println(seq.complement())
+    println(seq.transcribe())
+    println(seq.translate())
 }
         </code></pre>
         </div>
