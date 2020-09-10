@@ -34,13 +34,16 @@
     <!-- Content -->
     <div class="wrap">
         <h1>BioKotlin Playground demo</h1>
-        <h2>Automatic initialization</h2>
-        <p>For instance following block of Kotlin code:</p>
+        <h2>What is BioKotin?</h2>
+        <p>BioKotlin aims to be a high-performance bioinformatics library that brings the power and speed of compiled programming languages to scripting and big data environments.</p>
+        <p>BioKotlin is in the early stages of development, but we expect to support nucleotide and protein sequence manipulation, fast sequence IO, alignment, motif, and pathway support. Additionally, BioKotlin will leverage power tools for association mapping, pangenomes, and variant discovery.</p>
+        <p>Here, you can try out some initial code dealing with <code>Seq</code> objects. This is the central mechanism for dealing with biological sequence (i.e the cornerstone of Bioinformatics) in BioKotlin:</p>
         <div class="biokotlin-code">
         <pre><code>
 import biokotlin.seq.*
 
 fun main(args: Array&lt;String&gt;) {
+    // A test sequence
     val seq = NucSeq("ACGGCGATACGGCGAT")
 
     // The central dogma
