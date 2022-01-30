@@ -1,9 +1,8 @@
 library(magrittr)
 
 
-parseBibtex <- function() {
+parseBibtex <- function(citationUrl = "assets/publications.bib") {
     ## Get raw text ----
-    citationUrl <- "https://scholar.googleusercontent.com/citations?view_op=export_citations&user=buYGhlYAAAAJ&citsig=AMD79ooAAAAAYd3JMXzkstAdDHwPa9r_b6fTxFwH6zBe&hl=en"
     rawBibtex <- readLines(
         con = citationUrl
     )
@@ -30,7 +29,8 @@ parseBibtex <- function() {
         title   = "",
         year    = "",
         journal = "",
-        authors = ""
+        authors = "",
+        type    = ""
     )
     j <- 1
     for (i in articles) {
@@ -54,20 +54,26 @@ parseBibtex <- function() {
             yes  = NA, 
             no   = i[grep("author=", i)]
         )
+        articleDf[j, ]$type <- ifelse(
+            test = length(i[grep("@", i)]) == 0, 
+            yes  = NA, 
+            no   = i[grep("@", i)]
+        )
         j <- j + 1
     }
     
     
     ## Clean up ----
     articleDf$title   <- gsub("title=\\{|\\},",   "", articleDf$title) %>% trimws()
-    articleDf$year    <- gsub("year=\\{|\\},",    "", articleDf$year) %>% trimws() %>% as.numeric()
+    articleDf$year    <- gsub("year=\\{|\\}(,|$)",    "", articleDf$year) %>% trimws() %>% as.numeric()
     articleDf$journal <- gsub("journal=\\{|\\},", "", articleDf$journal) %>% trimws()
     articleDf$authors <- gsub("author=\\{|\\},",  "", articleDf$author) %>%
         trimws() %>%
         gsub(" and ", "; ", .) %>%
-        gsub("\\{\\\\\"a\\}", "ä", .) %>% 
-        gsub("\\{\\\\\"o\\}", "ö", .) %>% 
-        gsub("\\{\\\\\"u\\}", "ü", .)
+        gsub("\\{\\\\\"a\\}", "a", .) %>% 
+        gsub("\\{\\\\\"o\\}", "o", .) %>% 
+        gsub("\\{\\\\\"u\\}", "u", .)
+    articleDf$type    <- gsub("@|\\{.*", "", articleDf$type)
     
     articleDf <- articleDf[!is.na(articleDf$year), ]
     articleDf <- articleDf[order(-articleDf$year), ]
@@ -86,7 +92,7 @@ parseBibtex <- function() {
 }
 
 
-articleDf <- parseBibtex()
+parseBibtex() -> articleDf
 
 
 
