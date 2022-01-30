@@ -1,3 +1,3 @@
-## Brandon's attempt at a website
+## My Website
 
-*I'm so sorry, web developers, for these horrors I have unleashed...*
+My website coded from scratch using HTML, JavaScript, and R.
