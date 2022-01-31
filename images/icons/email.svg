@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="25.000019mm"
+   height="25.000019mm"
+   viewBox="0 0 25.000019 25.000019"
+   version="1.1"
+   id="svg18870"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="email.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview18872"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.74118967"
+     inkscape:cx="-275.90778"
+     inkscape:cy="93.768171"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="1072"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs18867" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-145.99518,-123.86297)">
+    <path
+       id="path18332"
+       style="fill:#de8787;stroke:none;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 158.49519,123.86297 a 12.5,12.5 0 0 0 -12.50001,12.50001 12.5,12.5 0 0 0 12.50001,12.50001 12.5,12.5 0 0 0 12.50001,-12.50001 12.5,12.5 0 0 0 -12.50001,-12.50001 z m -6.9603,7.83725 h 13.9206 c 0.15002,2e-5 0.29556,0.0507 0.41289,0.14417 -2.45774,1.41887 -4.91547,2.83768 -7.37319,4.25659 -2.45772,-1.41894 -4.91561,-2.83739 -7.37319,-4.25658 0.11736,-0.0934 0.2629,-0.14421 0.41289,-0.14418 z m -0.66301,1.45417 7.62331,4.40128 7.62331,-4.40128 v 7.20835 c -5e-5,0.36609 -0.2969,0.66297 -0.66301,0.66301 h -13.9206 c -0.3661,-4e-5 -0.66296,-0.29692 -0.66301,-0.66301 z" />
+  </g>
+</svg>

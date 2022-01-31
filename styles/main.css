@@ -204,9 +204,48 @@ body {
 
 /*Icon properties*/
 .icon {
-    padding-top: 75px;
+    justify-content: space-between;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 10px 0;
 }
+
+a img.hover {
+    display: none;
+    opacity: 0;
+    transition: opacity .7s;
+}
+a img.default {
+    display: inherit;
+}
+a:hover img.hover {
+    display: inherit;
+    opacity: 1;
+}
+a:hover img.default {
+    display: none;
+}
+
+/*.icon .img-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.icon:hover .img-top {
+    opacity: 1;
+}
+*/
+
+
+
 .fa {
     color: #8d8d8d;
 }
