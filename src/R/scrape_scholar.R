@@ -78,7 +78,8 @@ ggsave(
     units    = "px",
     width    = 290,
     height   = 250,
-    dpi      = 100,bg = "white"
+    dpi      = 100,
+    bg       = "white"
 )
 
 
