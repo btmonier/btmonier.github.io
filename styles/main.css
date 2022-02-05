@@ -5,11 +5,17 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Condensed:400,700|Robot+Mono');
 
 
+/*Global variables*/
+:root {
+    --txt-body-color: #555555;
+    --txt-head-color: #333333;
+}
+
 
 /*Text headings and body*/
 h1 {
     border-bottom: 1px solid #e2e2e2;
-    color: #242424;
+    color: var(--txt-head-color);
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     font-size: 170%;
@@ -18,7 +24,7 @@ h1 {
     padding-bottom: 8px;
 }
 h2, h3 {
-    color: #242424;
+    color: var(--txt-head-color);
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     margin-bottom: 0px;
@@ -36,7 +42,7 @@ mark {
     font-family: 'Open Sans', sans-serif;
 }
 p, li {
-    color: #242424;
+    color: var(--txt-body-color);
     font-family: 'Open Sans', sans-serif;
     font-size: 90%;
 }
@@ -48,7 +54,7 @@ pre, code {
 
 /*Links*/
 a.body:hover {
-    background: #e3e4fa; 
+    background: #e3e4fa;
     color: #2373ff;
     text-decoration: none;
 }
@@ -115,7 +121,7 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    font-family: 'Roboto Mono', monospace;    
+    font-family: 'Roboto Mono', monospace;
     font-size: 80%;
     margin: auto;
     margin-top: 20px;
@@ -124,18 +130,18 @@ body {
     width: 780px;
 }
 .note {
-    margin-top: 20px;    
+    margin-top: 20px;
     width: 780px;
 }
 .notebody {
     background-color: #e9f2fa;
     color: #242424;
     font-family: 'Open Sans', sans-serif;
-    font-size: 90%;    
+    font-size: 90%;
     padding: 5px 10px 5px 10px;
 }
 .notehead {
-    background-color: #6db2de;    
+    background-color: #6db2de;
     padding: 5px 10px 5px 10px;
 }
 .notehead:before{
@@ -146,18 +152,18 @@ body {
     word-spacing: 5px;
 }
 .warning {
-    margin-top: 20px;    
+    margin-top: 20px;
     width: 780px;
 }
 .warningbody {
     background-color: #fae9ca;
     color: #242424;
     font-family: 'Open Sans', sans-serif;
-    font-size: 90%;    
+    font-size: 90%;
     padding: 5px 10px 5px 10px;
 }
 .warninghead {
-    background-color: #f0b37d;    
+    background-color: #f0b37d;
     padding: 5px 10px 5px 10px;
 }
 .warninghead:before{
