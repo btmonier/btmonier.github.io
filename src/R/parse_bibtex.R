@@ -5,7 +5,8 @@ source("src/R/scrape_scholar.R")
 
 headTemplate <- "assets/templates/head.html"
 tailTemplate <- "assets/templates/tail.html"
-bibFile      <- "assets/publications.bib"
+# bibFile      <- "assets/publications.bib"
+bibFile <- "~/Documents/curriculum_vitae/bib/publications.bib"
 outputFile   <- "publications.html"
 statsImg     <- "images/stats/scholar_stats.png"
 

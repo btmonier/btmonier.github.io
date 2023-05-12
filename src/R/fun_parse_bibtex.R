@@ -54,7 +54,10 @@ parseBibtex <- function(citationUrl = bibFile) {
 
     ## Clean up ----
     articleDf$title   <- gsub("title=\\{|\\}(,|$)",   "", articleDf$title) %>% trimws()
-    articleDf$year    <- gsub("year=\\{|\\}(,|$)",    "", articleDf$year) %>% trimws() %>% as.numeric()
+    articleDf$year    <- gsub("year=\\{|\\}(,|$)",    "", articleDf$year) %>%
+        trimws() %>%
+        as.numeric() %>%
+        suppressWarnings() # suppress "20xx" entries for in-prep data
     articleDf$journal <- gsub("journal=\\{|\\}(,|$)", "", articleDf$journal) %>% trimws()
     articleDf$authors <- gsub("author=\\{|\\}(,|$)",  "", articleDf$author) %>%
         trimws() %>%
