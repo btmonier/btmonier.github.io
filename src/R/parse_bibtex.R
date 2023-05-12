@@ -1,5 +1,3 @@
-# library(magrittr)
-
 source("src/R/fun_parse_bibtex.R")
 source("src/R/scrape_scholar.R")
 
@@ -8,7 +6,6 @@ tailTemplate <- "assets/templates/tail.html"
 bibFile      <- "https://raw.githubusercontent.com/btmonier/curriculum_vitae/master/bib/publications.bib"
 outputFile   <- "publications.html"
 statsImg     <- "images/stats/scholar_stats.png"
-
 
 rawDf <- parseBibtex(bibFile)
 

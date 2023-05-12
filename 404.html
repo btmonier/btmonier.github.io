@@ -13,6 +13,7 @@
 
 
 
+
 <!-- The head -->
 <head>
     <title>404</title>
@@ -30,14 +31,40 @@
         <a href="./external">External Links</a>
     </div>
 
-    <div class="avatar">
-        <img src="images/misc/darmok.png" style="width:350px" />
-    </div>
+    <div class="avatar" id="avatar"></div>
 
     <div class="wrap">
         <center><h2>404</h2></center>
         <center><p>You seem to be lost...<p></center>
     </div>
+    <script>
+        var myImages = [
+            "images/bloodbeat.png",
+            "images/city_of_the_living_dead.png",
+            "images/darmok.png",
+            "images/django.png",
+            "images/dreamstalker.png",
+            "images/five_element.png",
+            "images/godzilla_dropkick.png",
+            "images/halloween_3.png",
+            "images/iron_man.png",
+            "images/michael.png",
+            "images/motion_tracker.png",
+            "images/possession.png",
+            "images/total_recall.png"
+        ];
+        
+        const randomIndex = Math.floor(Math.random() * myImages.length);
+        const randomImagePath = myImages[randomIndex];
+        
+        // Create an img element
+        const img = document.createElement('img');
+        img.src = randomImagePath;
+        img.width = 350;
+        
+        // Append
+        document.getElementById('avatar').appendChild(img);
+    </script>
 
 </body>
 
