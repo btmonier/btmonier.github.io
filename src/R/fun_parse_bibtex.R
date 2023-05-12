@@ -11,7 +11,7 @@ fieldCollector <- function(field, rawText) {
     )
 }
 
-parseBibtex <- function(citationUrl = bibFile) {
+parseBibtex <- function(citationUrl) {
     ## Get raw text ----
     rawBibtex <- readLines(
         con = citationUrl
@@ -39,7 +39,8 @@ parseBibtex <- function(citationUrl = bibFile) {
         journal = "",
         authors = "",
         type    = "",
-        doi     = ""
+        doi     = "",
+        url     = ""
     )
     j <- 1
     for (i in articles) {
@@ -49,6 +50,8 @@ parseBibtex <- function(citationUrl = bibFile) {
         articleDf[j, ]$authors <- fieldCollector("author=", i)
         articleDf[j, ]$type    <- fieldCollector("@", i)
         articleDf[j, ]$doi     <- fieldCollector("doi=", i)
+        articleDf[j, ]$url     <- fieldCollector("url=", i)
+
         j <- j + 1
     }
 
@@ -67,8 +70,9 @@ parseBibtex <- function(citationUrl = bibFile) {
         gsub("\\{\\\\\"u\\}", "u", .)
     articleDf$type    <- gsub("@|\\{.*", "", articleDf$type)
     articleDf$doi     <- gsub("doi=\\{|\\}(,|$)",   "", articleDf$doi) %>% trimws()
+    articleDf$url     <- gsub("url=\\{|\\}(,|$)",   "", articleDf$url) %>% trimws()
 
-    articleDf <- articleDf[!is.na(articleDf$year), ]
+    # articleDf <- articleDf[!is.na(articleDf$year), ]
     articleDf <- articleDf[order(-articleDf$year), ]
     row.names(articleDf) <- NULL
 
@@ -107,9 +111,13 @@ sectionParser <- function(
         tmpDf <- rawData[rawData$type == sub, ]
     }
 
-    tmpDf %<>%
-        split(., f = .$year) %>%
-        rev()
+    if (sub != "unpublished") {
+        tmpDf %<>%
+            split(., f = .$year) %>%
+            rev()
+    } else {
+        tmpDf <- list(tmpDf)
+    }
 
     tmpLs <- vector("list", tmpDf %>% length())
     for (i in tmpDf %>% length() %>% seq_len()) {
@@ -120,8 +128,8 @@ sectionParser <- function(
                 tmpDf[[i]][j, ]$authors,
                 " (", tmpDf[[i]][j, ]$year, ") ",
                 tmpDf[[i]][j, ]$title, ". ",
-                tmpDf[[i]][j, ]$journal,
-                " doi: <a class=\"body\" href=\"", tmpDf[[i]][j, ]$doi, "\">", tmpDf[[i]][j, ]$doi, "</a>",
+                ifelse(is.na(tmpDf[[i]][j, ]$journal), "", tmpDf[[i]][j, ]$journal),
+                " doi: <a class=\"body\" href=\"", tmpDf[[i]][j, ]$url, "\">", tmpDf[[i]][j, ]$url, "</a>",
                 "</p>"
             )
         }

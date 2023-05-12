@@ -10,16 +10,18 @@ outputFile   <- "publications.html"
 statsImg     <- "images/stats/scholar_stats.png"
 
 
-rawDf <- parseBibtex()
+rawDf <- parseBibtex(bibFile)
 
 writeLines(
     text = c(
         readLines(headTemplate),
         "<h1>Publications</h1>",
-        sectionParser("unpublished"),
-        sectionParser("book"),
-        sectionParser("article"),
-        sectionParser("thesis"),
+        if (any(rawDf$type == "unpublished")) {
+            sectionParser("unpublished", synonym = synDf, rawData = rawDf)
+        },
+        sectionParser("book", synonym = synDf, rawData = rawDf),
+        sectionParser("article", synonym = synDf, rawData = rawDf),
+        sectionParser("thesis", synonym = synDf, rawData = rawDf),
         paste0(
             "<h2>Stats</h2>",
             "<p><img src=\"",
