@@ -1,8 +1,4 @@
 # Functions for parsing BibTex file ---------------------------------
-
-
-`%>%` <- magrittr::`%>%`
-
 fieldCollector <- function(field, rawText) {
     ifelse(
         test = length(rawText[grep(field, rawText)]) == 0,
@@ -56,21 +52,21 @@ parseBibtex <- function(citationUrl) {
     }
 
     ## Clean up ----
-    articleDf$title   <- gsub("title=\\{|\\}(,|$)",   "", articleDf$title) %>% trimws()
-    articleDf$year    <- gsub("year=\\{|\\}(,|$)",    "", articleDf$year) %>%
-        trimws() %>%
-        as.numeric() %>%
+    articleDf$title   <- gsub("title=\\{|\\}(,|$)",   "", articleDf$title) |> trimws()
+    articleDf$year    <- gsub("year=\\{|\\}(,|$)",    "", articleDf$year) |>
+        trimws() |>
+        as.numeric() |>
         suppressWarnings() # suppress "20xx" entries for in-prep data
-    articleDf$journal <- gsub("journal=\\{|\\}(,|$)", "", articleDf$journal) %>% trimws()
-    articleDf$authors <- gsub("author=\\{|\\}(,|$)",  "", articleDf$author) %>%
-        trimws() %>%
-        gsub(" and ", "; ", .) %>%
-        gsub("\\{\\\\\"a\\}", "a", .) %>%
-        gsub("\\{\\\\\"o\\}", "o", .) %>%
+    articleDf$journal <- gsub("journal=\\{|\\}(,|$)", "", articleDf$journal) |> trimws()
+    articleDf$authors <- gsub("author=\\{|\\}(,|$)",  "", articleDf$author) |>
+        trimws() |>
+        gsub(" and ", "; ", .) |>
+        gsub("\\{\\\\\"a\\}", "a", .) |>
+        gsub("\\{\\\\\"o\\}", "o", .) |>
         gsub("\\{\\\\\"u\\}", "u", .)
     articleDf$type    <- gsub("@|\\{.*", "", articleDf$type)
-    articleDf$doi     <- gsub("doi=\\{|\\}(,|$)",   "", articleDf$doi) %>% trimws()
-    articleDf$url     <- gsub("url=\\{|\\}(,|$)",   "", articleDf$url) %>% trimws()
+    articleDf$doi     <- gsub("doi=\\{|\\}(,|$)",   "", articleDf$doi) |> trimws()
+    articleDf$url     <- gsub("url=\\{|\\}(,|$)",   "", articleDf$url) |> trimws()
 
     # articleDf <- articleDf[!is.na(articleDf$year), ]
     articleDf <- articleDf[order(-articleDf$year), ]
@@ -112,16 +108,16 @@ sectionParser <- function(
     }
 
     if (sub != "unpublished") {
-        tmpDf %<>%
-            split(., f = .$year) %>%
+        tmpDf <- tmpDf |>
+            split(., f = .$year) |>
             rev()
     } else {
         tmpDf <- list(tmpDf)
     }
 
-    tmpLs <- vector("list", tmpDf %>% length())
-    for (i in tmpDf %>% length() %>% seq_len()) {
-        for (j in tmpDf[[i]] %>% nrow() %>% seq_len()) {
+    tmpLs <- vector("list", tmpDf |> length())
+    for (i in tmpDf |> length() |> seq_len()) {
+        for (j in tmpDf[[i]] |> nrow() |> seq_len()) {
             tmpLs[[i]][1] <- paste0("<h3>", names(tmpDf)[i], "</h3>")
             tmpLs[[i]][j + 1] <- paste0(
                 "<p>",
@@ -135,7 +131,7 @@ sectionParser <- function(
         }
     }
 
-    return(c(tmpHtml, tmpLs %>% unlist()))
+    return(c(tmpHtml, tmpLs |> unlist()))
 }
 
 
