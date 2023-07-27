@@ -26,7 +26,7 @@ writeLines(
             "\" alt=\"Google Scholar Stats\"></p>",
             "\n"
         ),
-        metrics %>% unlist(),
+        metrics |> unlist(),
         paste0(
             "<br>",
             "<p><i>Last Compiled: </i><code>",

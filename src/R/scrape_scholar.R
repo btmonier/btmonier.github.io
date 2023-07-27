@@ -1,5 +1,7 @@
 library(ggplot2)
 
+`%>%` <- dplyr::`%>%`
+
 
 ## Parameters ----
 url     <- "https://scholar.google.com/citations?user=buYGhlYAAAAJ&hl=en"
