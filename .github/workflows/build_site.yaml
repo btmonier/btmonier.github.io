@@ -26,8 +26,8 @@ jobs:
         Rscript -e "install.packages('httr')"
         Rscript -e "install.packages('rvest')"
     
-    -name: Build site
-     run: Rscript src/R/parse_bibtex.R
+    - name: Build site
+      run: Rscript src/R/parse_bibtex.R
 
         #    - name: Build PDF
         #      run: Rscript -e "rmarkdown::render('btmonier_cv.Rmd')"
