@@ -1,3 +1,1 @@
-## My Website
-
-My website coded from scratch using HTML, JavaScript, and R.
+My old site. Please see [personal_site](https://github.com/btmonier/personal_site) for current project.
